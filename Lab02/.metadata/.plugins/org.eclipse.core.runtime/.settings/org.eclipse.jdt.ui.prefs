@@ -1,11 +1,8 @@
-<<<<<<< HEAD
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=488637b (repush)
+content_assist_autoactivation_triggers_java=.@(\#&$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 content_assist_favorite_static_members=org.testng.Assert.*
-=======
-<<<<<<< HEAD
-content_assist_favorite_static_members=org.testng.Assert.*
-=======
->>>>>>> fe7f75c491bfd479114e95ef0f1b65eed8201b9d
->>>>>>> 488637b (repush)
 content_assist_number_of_computers=15
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0

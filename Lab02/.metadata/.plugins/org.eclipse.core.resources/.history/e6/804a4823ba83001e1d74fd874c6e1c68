@@ -41,7 +41,6 @@ public class TestPassingParameter {
 		dvd2.setLength(tmp.getLength());
 		dvd2.setCost(tmp.getCost());
     }
-	
 	public static void changeTitle(DigitalVideoDisc dvd, String title) {
 		String oldTitle = dvd.getTitle();
 		dvd.setTitle(title);
