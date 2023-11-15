@@ -17,10 +17,10 @@ public class Aims {
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
                 "Animation", 18.99f);
         
-//      method add DVDs với số lượng tham số truyền vào là tùy ý
+    //  method add DVDs với số lượng tham số truyền vào là tùy ý
 //        anOrder.addDigitalVideoDisc1(dvd1, dvd2, dvd3);
         
-//      method add DVDs với tham số là array
+     // method add DVDs với tham số là array
 //        DigitalVideoDisc[] discList = {dvd1, dvd3};
 //        anOrder.addDigitalVideoDisc(discList);
 

@@ -57,7 +57,7 @@ public class Cart {
         System.out.println("DVDs have been added to the cart.");
     }
     
-//      method add DVDs với số lượng tham số truyền vào là tùy ý
+    //  method add DVDs với số lượng tham số truyền vào là tùy ý
     public void addDigitalVideoDisc1(DigitalVideoDisc... dvdList) {
         for (DigitalVideoDisc disc : dvdList) {
             addDigitalVideoDisc(disc);
