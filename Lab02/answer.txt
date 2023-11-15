@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 488637b (repush)
+When should accessor methods be used?
+
+Encapsulation: Accessor methods are an essential part of the principle of encapsulation in object-oriented programming. They allow you to hide the internal details of an object's state and provide controlled, read-only access to its attributes. This helps in maintaining data integrity and prevents unintended modification of an object's state.
+
+Data Abstraction: Accessor methods abstract the underlying data and provide a high-level, consistent interface for accessing an object's properties. This makes it easier to work with objects without needing to know the internal implementation details.
+
+Data Validation: Accessor methods can perform validation checks before returning the attribute's value. For example, you can ensure that a temperature attribute is within a valid range or that a string attribute is not null or empty before returning its value.
+
+Computed Properties: Accessor methods can be used to compute and return derived or calculated properties based on the object's existing attributes. For example, you can have a getArea() method in a Rectangle class that computes and returns the area based on its width and height attributes.
+
+Access Control: Accessor methods allow you to control access to an attribute. You can make an attribute private and provide a getter method to allow read-only access while preventing direct modification of the attribute.
+<<<<<<< HEAD
+
+Encapsulation of Complex Logic: In some cases, accessor methods may encapsulate complex logic or operations necessary to retrieve the attribute's value. This can include fetching data from a database, performing transformations, or other operations.
+=======
+>>>>>>> 488637b (repush)

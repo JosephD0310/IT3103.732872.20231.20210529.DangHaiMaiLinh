@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\LINH\Document\BK\20231\OOP Lab\OOP-Object-Oriented-Programming\Lab01\.metadata\.plugins\org.eclipse.jdt.core
+2868695985.index
+1184751556.index
+1865797976.index
