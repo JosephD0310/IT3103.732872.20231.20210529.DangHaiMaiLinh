@@ -1,0 +1,5 @@
+Is JAVA a Pass by Value or a Pass by Reference programming language? 
+
+Java là một ngôn ngữ lập trình "pass by value." Trong Java, khi truyền một biến vào một phương thức, có nghĩa là đang truyền một bản sao của giá trị mà biến đó đang lưu trữ, không phải biến gốc. Điều này có nghĩa là bất kỳ thay đổi nào được thực hiện trên tham số bên trong phương thức sẽ không ảnh hưởng đến biến gốc bên ngoài phương thức.
+
+Nhưng khi truyền một đối tượng, có nghĩa là đang truyền một tham chiếu đến đối tượng bằng giá trị. Điều này có thể gây hiện tượng giống "pass by reference" bởi vì có thể sửa đổi đối tượng thông qua tham chiếu, nhưng cơ chế cơ bản vẫn là "pass by value."
