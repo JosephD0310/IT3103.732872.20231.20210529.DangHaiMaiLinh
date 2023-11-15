@@ -47,7 +47,10 @@ public class Cart {
         }
         return total;
     }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 488637b (repush)
     
     // method add DVDs với tham số là array
     public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
@@ -69,5 +72,9 @@ public class Cart {
     	addDigitalVideoDisc(dvd1);
     	addDigitalVideoDisc(dvd2);
     }
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fe7f75c491bfd479114e95ef0f1b65eed8201b9d
+>>>>>>> 488637b (repush)
 }
