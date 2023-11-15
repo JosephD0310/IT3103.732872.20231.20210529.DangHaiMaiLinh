@@ -6,7 +6,7 @@ public class TestPassingParameter {
 		DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
 		DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 		
-		correctSwap(jungleDVD, cinderellaDVD);
+		swap(jungleDVD, cinderellaDVD);
 		System.out.println("jungle dvd title: " + jungleDVD.getTitle());
 		System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
 		
@@ -21,7 +21,7 @@ public class TestPassingParameter {
 //		o2 = tmp;
 //	}
 	
-	public static void correctSwap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+	public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
 		DigitalVideoDisc tmp = new DigitalVideoDisc(
 				dvd1.getTitle(), 
 				dvd1.getCategory(), 

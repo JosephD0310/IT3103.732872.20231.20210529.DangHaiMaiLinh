@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class Cart {
 
     // Max Number of order
@@ -72,9 +70,5 @@ public class Cart {
     	addDigitalVideoDisc(dvd2);
     }
     
-    public void listID() {
-		for (int i = 0; i < qtyOrdered; i++)
-			System.out.println("ID: " + itemsOrdered[i].getId() 
-									  + " - " + itemsOrdered[i].getTitle());
-	}
+
 }
