@@ -77,19 +77,4 @@ public class Cart {
 			System.out.println("ID: " + itemsOrdered[i].getId() 
 									  + " - " + itemsOrdered[i].getTitle());
 	}
-    
-    public void printCart() {
-        System.out.println("***********************CART***********************");
-        System.out.println("Ordered Items:");
-
-        for (int i = 0; i < qtyOrdered; i++) {
-            DigitalVideoDisc dvd = itemsOrdered[i];
-            System.out.printf("%d. DVD - %s - %s - %s - %d minutes: %.2f $\n", i + 1, dvd.getTitle(),
-                    dvd.getCategory(), dvd.getDirector(), dvd.getLength(), dvd.getCost());
-        }
-
-        float totalCost = totalCost();
-        System.out.printf("Total cost: %.2f $\n", totalCost);
-        System.out.println("***************************************************");
-    }
 }
