@@ -34,9 +34,22 @@ public abstract class Media {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Media)) return false;
-        // 2 media items are considered as identical if they have the same title
-        return ((Media) o).getTitle().equals(this.title);
+    	 try {
+    		// Check if the object is compared to itself
+    	        if (this == o) return true;
+
+    	        // Check if the object is null
+    	        if (o == null) return false;
+    	        
+    	        if (!(o instanceof Media)) return false;
+    	        
+    	        // 2 media items are considered as identical if they have the same title
+    	        return ((Media) o).getTitle().equals(this.title);
+ 		} catch (NullPointerException|ClassCastException e) {
+ 			// TODO: handle exception
+ 			e.printStackTrace();
+ 		}
+		return false;
     }
 
     // Auto-generated setters and getters

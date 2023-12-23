@@ -1,26 +1,51 @@
 package hust.soict.dsai.aims;
 import java.util.Scanner;
 
+import javax.naming.LimitExceededException;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.CompactDisc;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
+import hust.soict.dsai.aims.screen.CartScreen;
+import hust.soict.dsai.aims.screen.StoreScreen;
 import hust.soict.dsai.aims.store.Store;
 
 public class Aims {
     public static Scanner scanner = new Scanner(System.in);
     public static Store store = new Store();
     public static Cart cart = new Cart();
-
-    public static void main(String[] args) {
-        showMenu();
+    
+    
+    
+    public static void main(String[] args) throws LimitExceededException {
+    	Media dvd1 = new DigitalVideoDisc("Doraemon","Cartoon", 18);
+        Media dvd2 = new DigitalVideoDisc("Conan","Anime", 20);
+        Media dvd3 = new DigitalVideoDisc("Dragon Ball","VideoGame", 50);
+        Media cd1 = new CompactDisc("Chrismas","Music", 30);
+        Media cd2 = new CompactDisc("TalorSwift","Music", 35);
+        Media cd3 = new CompactDisc("SonTungMTP","Music", 33);
+        Media book1 = new Book("OOP Tutorial","Education", 25);
+        Media book2 = new Book("Onepiece","Manga", 28);
+        Media book3 = new Book("Cooking", "Skill",22);
+    	store.addMedia(dvd1, dvd2, dvd3, cd1, cd2, cd3, book1, book2, book3);
+    	cart.addMedia(book3);
+    	cart.addMedia(dvd2);
+    	cart.addMedia(cd1);
+//    	showMenu();
+//    	new StoreScreen(store);
+    	new CartScreen(cart);
     }
-
-    public static void showMenu() {
+    
+    public static void showMenu() throws LimitExceededException {
         while (true) {
-            System.out.println("DANG HAI MAI LINH 20210529");
+            System.out.println("Dang Hai Mai Linh 20210529");
             System.out.println("--------------------------------");
             System.out.println("1. View store");
             System.out.println("2. Update store");
@@ -125,7 +150,7 @@ public class Aims {
         return item;
     }
 
-    public static void storeMenu() {
+    public static void storeMenu() throws LimitExceededException {
         while (true) {
             System.out.println("Options");
             System.out.println("--------------------------------");
@@ -168,12 +193,17 @@ public class Aims {
                     title = scanner.nextLine();
                     item = store.search(title);
                     if (item instanceof Playable) {
-                        ((Playable) item).play();
+                        try {
+							((Playable) item).play();
+						} catch (PlayerException e) {
+							// TODO Auto-generated catch block
+							handleException(e);
+						}
                     } else if (item != null) {
                         System.out.println("This item is not playable");
                     }
                     continue;
-                case 4:
+                case 4	:
                     cart.print();
                     continue;
                 default:
@@ -184,7 +214,7 @@ public class Aims {
         }
     }
 
-    public static void mediaDetailsMenu(Media item) {
+    public static void mediaDetailsMenu(Media item) throws LimitExceededException {
         while (true) {
             System.out.println("Options: ");
             System.out.println("--------------------------------");
@@ -206,7 +236,12 @@ public class Aims {
                     if (item instanceof Book) {
                         System.out.println("Books are not playable");
                     } else if (item instanceof Playable) {
-                        ((Playable) item).play();
+                        try {
+							((Playable) item).play();
+						} catch (PlayerException e) {
+							// TODO Auto-generated catch block
+							handleException(e);
+						}
                     }
                     continue;
                 default:
@@ -264,7 +299,12 @@ public class Aims {
                         continue;
                     }
                     if (item instanceof Playable) {
-                        ((Playable) item).play();
+                        try {
+							((Playable) item).play();
+						} catch (PlayerException e) {
+							// TODO Auto-generated catch block
+							handleException(e);
+						}
                     } else {
                         System.out.println("Item not playable");
                     }
@@ -289,5 +329,17 @@ public class Aims {
             break;
         }
     }
+    
+    public static void handleException(Exception e) {
+        String errorMessage = "An exception occurred: " + e.getMessage();
+        System.out.println(errorMessage);
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame();
+            frame.setVisible(true);
+            JOptionPane.showMessageDialog(frame, errorMessage, "Error", JOptionPane.ERROR_MESSAGE);
+        });
+
+    }
 }
+
 

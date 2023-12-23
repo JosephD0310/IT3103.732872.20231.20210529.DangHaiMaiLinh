@@ -31,7 +31,7 @@ public class NumberGrid extends JFrame {
 		cp.add(panelButtons, BorderLayout.CENTER);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Number Grid - Do Thuy Duong 20215019");
+		setTitle("Number Grid - Dang Hai Mai Linh 20210529");
 		setSize(200, 200);
 		setVisible(true);
 	}

@@ -1,5 +1,10 @@
 package hust.soict.dsai.aims.media;
 
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public class Track implements Playable {
 
 	private String title;
@@ -10,9 +15,19 @@ public class Track implements Playable {
         this.length = length;
     }
 
-    public void play() {
-        System.out.println("Playing track: " + this.getTitle());
-        System.out.println("Track length: " + this.getLength());
+    public void play() throws PlayerException {
+        // TODO Auto-generated method stub
+        if (this.getLength() > 0) {
+            JDialog dialog = new JDialog();
+            dialog.setSize(300, 200);
+
+            // create Label
+            JLabel text = new JLabel("Track - Title : " + this.getTitle() + " Length : " + this.getLength());
+            dialog.add(text);
+            dialog.setTitle("Play Track");
+            dialog.setVisible(true);
+        } else
+            throw new PlayerException("ERROR : Track length is non-positive");
     }
 
     public String getTitle() {

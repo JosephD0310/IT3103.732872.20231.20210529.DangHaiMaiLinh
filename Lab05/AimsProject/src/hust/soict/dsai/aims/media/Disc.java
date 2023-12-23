@@ -13,6 +13,10 @@ public class Disc extends Media {
     public Disc(String title, float cost) {
         super(title, cost);
     }
+    
+    public Disc(String title,String category, float cost) {
+        super(title,category, cost);
+    }
 
     public int getLength() {
         return length;

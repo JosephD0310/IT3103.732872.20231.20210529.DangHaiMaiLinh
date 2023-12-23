@@ -6,7 +6,11 @@ import hust.soict.dsai.aims.media.Media;
 
 public class Store {
     private static final int MAX_ITEMS = 100;
-    private List<Media> itemsInStore = new ArrayList<>();
+    private ArrayList<Media> itemsInStore = new ArrayList<>();
+    
+    public ArrayList<Media> getItemsInStore() {
+		return this.itemsInStore;
+	}
 
     public boolean addMedia(Media media) {
         if (itemsInStore.size() == MAX_ITEMS) {
@@ -17,6 +21,11 @@ public class Store {
             System.out.println("Item added successfully");
             return true;
         }
+    }
+    public void addMedia(Media...medias) {
+    	for (Media media : medias) {
+    		addMedia(media);
+    	}
     }
 
     public boolean removeMedia(Media media) {
